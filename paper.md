@@ -79,8 +79,8 @@ Table 2 applies the fee formula to Becker’s published win rates. Figure 1 plot
 
 | Position              | Before fee |   Fee |  After fee | After fee, % of stake |
 |:----------------------|-----------:|------:|-----------:|----------------------:|
-| Buy YES at 1¢ (taker) | $`-0.57`$¢ | 0.07¢ | $`-0.64`$¢ |             $`-60\%`$ |
-| Buy at 5¢ (all)       | $`-0.82`$¢ | 0.33¢ | $`-1.15`$¢ |             $`-22\%`$ |
+| Buy YES at 1¢ (taker) | $`-0.57`$¢ | 0.07¢ | $`-0.64`$¢ |             $`-64\%`$ |
+| Buy at 5¢ (all)       | $`-0.82`$¢ | 0.33¢ | $`-1.15`$¢ |             $`-23\%`$ |
 | Buy at 50¢ (taker)    | $`-1.33`$¢ | 1.75¢ | $`-3.08`$¢ |              $`-6\%`$ |
 | Buy at 95¢ (all)      | $`+0.83`$¢ | 0.33¢ | $`+0.50`$¢ |            $`+0.5\%`$ |
 
@@ -91,7 +91,7 @@ Taker returns after Kalshi’s fee, computed from Becker (2026). Rows marked “
 <figcaption>Kalshi’s taker fee and the no-trade band (fee plus an assumed 1.2-cent half-spread), against observed mispricing at four prices. The half-spread follows a reported 2.4-cent median spread (StockAlarm 2025) and is an assumption.</figcaption>
 </figure>
 
-At 50 cents, where most volume trades, the observed taker mispricing (1.33 cents) is smaller than the fee alone, as Proposition 2 predicts. At the extremes, the absolute bias is small but the fee is smaller still, so a thin positive margin appears for favorite buyers. That margin is statistically weak for any one trader. At 95 cents, a contract has an expected net gain of about 0.50 cents and a standard deviation of about 20 cents. Roughly 4,400 independent bets are needed before realized profit is positive with 95% confidence, and correlated outcomes raise that number.
+At 50 cents, where most volume trades, the observed taker mispricing (1.33 cents) is smaller than the fee alone, as Proposition 2 predicts. At the extremes, the absolute bias is small but the fee is smaller still, so a thin positive margin appears for favorite buyers. That margin is statistically weak for any one trader. At 95 cents, a contract has an expected net gain of about 0.50 cents and a standard deviation of about 21.8 cents. Roughly 5,100 independent bets are needed before realized profit is positive with one-sided 95% confidence (7,300 two-sided), and correlated outcomes raise that number.
 
 #### Categories.
 
@@ -128,7 +128,11 @@ Not entirely. Long-horizon underpricing of favorites partly reflects capital loc
 
 #### Limitations.
 
-First, contracts on the same event resolve together, so trade counts overstate independent observations; Le’s strong political underconfidence (slopes up to 1.83) may reflect a few 2024 election outcomes, consistent with Becker’s small political taker loss ($`-0.51\%`$). Second, the data end in late 2025, before Kalshi’s February and July 2026 fee revisions and Polymarket’s March 2026 fee expansion. Third, maker and taker labels proxy imperfectly for sophistication. Fourth, the 1.2-cent half-spread in Figure 1 is an assumption.
+First, contracts on the same event resolve together, so trade counts overstate independent observations; Le’s strong political underconfidence (slopes up to 1.83) may reflect a few 2024 election outcomes, consistent with Becker’s small political taker loss ($`-0.51\%`$). Second, the data end in late 2025, before Kalshi’s February and July 2026 fee revisions and Polymarket’s March 2026 fee expansion. Third, maker and taker labels proxy imperfectly for sophistication. Fourth, the 1.2-cent half-spread in Figure 1 is an assumption. Fifth, Proposition 2 is an equilibrium argument that assumes free entry and no capital or position limits. It is not proved from the data, and the 95-cent row of Table 2 (+0.50 cents after fee) is a positive net return that the band argument does not rule out. Sixth, the Kalshi fee schedule (Kalshi 2026a) could not be re-fetched on 2026-11-06 (HTTP 429), so the fee formula and the 157-series maker exception are taken from the earlier reading. Seventh, Becker's figures were re-checked against his web page (72.1M trades, 1.33-cent taker loss at 50 cents from -2.65%, 80 of 99 price levels, category table). Bürgi et al., Gómez-Cram et al. and the Princeton thesis were not re-checked.
+
+#### Reading Table 2.
+
+Table 2 shows what the average taker earned. It is not the return of a trader who exploits the bias. A taker who systematically took the opposite side of the 50-cent average taker would gain 1.33 cents before fee and pay 1.75 cents, a net of -0.42 cents per contract, which is still negative. This is the arithmetic behind the band. It uses Becker's price-bucket averages and ignores spread, so it is a bound on price-only strategies and not a tested trading result.
 
 # Conclusion
 

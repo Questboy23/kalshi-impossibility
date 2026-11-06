@@ -1,8 +1,10 @@
 # AI disclosure
 
-**Ideas:** Reed Ostrov.
+Ideas, question and claims: Reed Ostrov.
 
-**What the AI did (Claude, by Anthropic, through Claude Code):**
-- Pulled Kalshi market and fee data, did the math behind the result, and wrote the analysis code.
-- Wrote the README and other text from Reed's direction.
-- Searched for existing tools, papers and datasets to build on.
+Claude (Anthropic, through Claude Code) did:
+- Gathered the cited papers and the Kalshi and Polymarket fee schedules.
+- Did the break-even arithmetic and wrote `fig.py`.
+- Typeset the paper and drafted the text from Reed's direction.
+
+Claude did not collect trade data or run trades. The paper uses published figures only.
